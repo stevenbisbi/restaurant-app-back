@@ -27,4 +27,4 @@ EXPOSE 8000
 
 # Usa Gunicorn para producción
 
-CMD ["sh", "-c", "python manage.py migrate && python manage.py shell < create_superuser.py && python manage.py runserver 0.0.0.0:8000"]
+CMD ["sh", "-c", "python manage.py migrate && python manage.py shell < create_superuser.py && daphne -b 0.0.0.0 -p 8000 backend.asgi:application"]
