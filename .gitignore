@@ -1,0 +1,57 @@
+# Entorno virtual
+venv/
+ENV/
+env/
+.venv/
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de log y base de datos
+*.log
+*.pot
+*.sqlite3
+
+# Archivos de configuración y seguridad
+*.env
+.env.*
+
+# Archivos de migraciones (si no quieres subirlos, aunque algunos sí prefieren tenerlos)
+# Puedes comentar esta línea si prefieres versionar las migraciones
+# */migrations/*.py
+*/migrations/__pycache__/
+
+# Archivos del editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de cobertura de pruebas
+htmlcov/
+.coverage
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+
+# Archivos estáticos generados automáticamente
+staticfiles/
+static/
+media/
+
+# Archivos de compilación
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Archivos de lock (si usas pipenv o poetry)
+Pipfile.lock
+poetry.lock
