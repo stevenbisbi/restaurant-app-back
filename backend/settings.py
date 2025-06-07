@@ -92,9 +92,11 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
+CORS_ALLOW_CREDENTIALS = True
+
 # Permitir desde localhost:5173
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "https://restaurant-app-back-coi5.onrender.com/",
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -205,13 +207,13 @@ AUTH_USER_MODEL = 'users.User'
 # Configura Redis para Channels (requiere "channels-redis")
 CHANNEL_LAYERS = {
     "default": {
-        "BACKEND": "channels.layers.InMemoryChannelLayer",
-        #"BACKEND": "channels_redis.core.RedisChannelLayer",
-        # "CONFIG": {
-#"hosts": [("127.0.0.1", 6379)],  # Si usas Docker, usa el nombre del servicio
-        #},
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [os.getenv("REDIS_URL", "redis://localhost:6379/0")],
+        },
     },
 }
+
 
 
 # Configuración de correo (para notificaciones)
