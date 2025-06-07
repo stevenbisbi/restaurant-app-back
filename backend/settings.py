@@ -104,7 +104,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 # Permitir desde localhost:5173
 CORS_ALLOWED_ORIGINS = [
-    "https://restaurant-app-back-coi5.onrender.com/",
+    "https://restaurant-app-frontend-rho-teal.vercel.app",
 ]
 
 ROOT_URLCONF = 'backend.urls'
