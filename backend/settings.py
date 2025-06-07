@@ -133,11 +133,17 @@ ASGI_APPLICATION = 'backend.asgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-import dj_database_url
-
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'restaurantdb_fm1x',
+        'USER': 'restaurantdb_fm1x_user',
+        'PASSWORD': 'tOfzKPVJrqJJ8npaFSSK2BxwtvuqYZit',
+        'HOST': 'dpg-d127eih5pdvs73cf10i0-a',  # o la IP del servidor de la base de datos
+        'PORT': '5432',       # puerto por defecto de PostgreSQL
+    }
 }
+
 
 
 
