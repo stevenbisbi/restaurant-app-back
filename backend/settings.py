@@ -32,7 +32,14 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+SECURE_SSL_REDIRECT = True  # redirige a https
+
+# Le indica a Django confiar en el encabezado que Render envía
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+ALLOWED_HOSTS = ["restaurant-app-back-coi5.onrender.com"]
+
 
 
 
